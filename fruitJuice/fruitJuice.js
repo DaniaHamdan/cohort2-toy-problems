@@ -21,8 +21,28 @@ Complete the functions in order to provide this functionality.
 */
 
 function Jar() {
-  // TODO
+
+this.apple=0;
+this.banana=0;
+this.total=0
+this.getConcentration()
+this.add();
+this.getTotalAmount()
+   
 }
+
+
+ Jar.prototype.getConcentration = function(str) {
+ 	console.log(this.str/this.total)
+ }
+Jar.prototype.add = function(num,str) {
+	this.total+=num
+ 	this[str]+=num
+ }
+ Jar.prototype.getTotalAmount = function(str) {
+ 	console.log( this.total)
+ }
+
 
 /*
 These are some tests:
