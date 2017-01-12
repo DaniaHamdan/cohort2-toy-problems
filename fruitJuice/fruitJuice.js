@@ -28,7 +28,6 @@ this.total=0
 this.getConcentration()
 this.add();
 this.getTotalAmount()
-   
 }
 
 
@@ -39,7 +38,7 @@ Jar.prototype.add = function(num,str) {
 	this.total+=num
  	this[str]+=num
  }
- Jar.prototype.getTotalAmount = function(str) {
+ Jar.prototype.getTotalAmount = function() {
  	console.log( this.total)
  }
 
