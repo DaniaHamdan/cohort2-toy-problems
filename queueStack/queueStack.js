@@ -31,22 +31,22 @@
    */
  var Queue = function() {
    // Use two `stack` instances to implement your `queue` Class
-   this.inbox = new Stack();
-   this.outbox = new Stack();
+   var.inbox = new Stack();
+   var.outbox = new Stack();
    this.count=0
 }
    // called to add an item to the `queue`
    	Queue.prototype.enqueue = function(value){
    		this.inbox.push(value)
    		this.count++
+  
    };
 
    // called to remove an item from the `queue`
    	Queue.prototype.dequeue = function(){
-   		that=this
    	    if (this.outbox.sizeS()===0) {
             while (!this.inbox.sizeS()===0) {
-              this. outbox.push(this.inbox.pop());
+             this.outbox.push(this.inbox.pop());
             }
         }
         this.count--
@@ -57,4 +57,3 @@
    	Queue.prototype.size = function(){
    		return this.count
    };
-

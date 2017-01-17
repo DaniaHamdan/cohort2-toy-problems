@@ -20,7 +20,7 @@ rotate([true, true, false], 1) // => [false, true, true]
 var data = [1, 2, 3, 4, 5];
 rotate(data, 1) // => [5, 1, 2, 3, 4]
 rotate(data, 2) // => [4, 5, 1, 2, 3] 5 4 
-rotate(data, 5) // => [1, 2, 3, 4, 5] 
+rotate(data, 5) // => [1, 2, 3, 4, 5]
 rotate(data, 0) // => [1, 2, 3, 4, 5]
 rotate(data, -1) // => [2, 3, 4, 5, 1]
 rotate(data, -2) // => [3, 4, 5, 1, 2]
@@ -35,6 +35,21 @@ rotate(data, 12478) // => [3, 4, 5, 1, 2]
 
 */
 function rotate(array, steps){
+	var arr=array
+	if(Math.abs(steps)===array.length || 0){
+		return array
+	}
+	if(steps>0){
+		for(var j=0;j<steps;j++){
+	arr.unshift(arr.pop())
+	}
+}
+	if(steps<0){
+		for(var j=0;j<Math.abs(steps);j++){
+	arr.push(arr.shift())
+	}
+}
+	return arr
 
 }
 
@@ -56,5 +71,16 @@ nextBigger(531)==-1
 */
 
 function nextBigger(num){
+	var str=num.toString
+	var array=str.split("")
+	if(array[array.length-1]>array[array.length-2]){
+		var temp=array[array.length-1]
+		array[array.length-1]=[array.length-2];
+		[array.length-2]=array[array.length-1]
+	}
+	if(Number(arr.join(""))===num){
+		return -1;
+	}
+    return	Number(arr.join(""))
 
 }
