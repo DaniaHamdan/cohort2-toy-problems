@@ -62,6 +62,7 @@ Exanmples:
 nextBigger(12)==21
 nextBigger(513)==531
 nextBigger(2017)==2071
+5765769=5765796
 
 If no bigger number can be composed using those digits, return -1:
 
@@ -78,7 +79,7 @@ function nextBigger(num){
 		array[array.length-1]=[array.length-2];
 		[array.length-2]=array[array.length-1]
 	}
-	if(Number(arr.join(""))===num){
+	if(Number(arr.join(""))<=num){
 		return -1;
 	}
     return	Number(arr.join(""))

@@ -5,5 +5,7 @@ Hint the answer is 1366.
 */
 
 var powerOfTwo = function(num){
+	var x= Math.pow(2,1000)
+	var arr=String(x).spilt("")
 
 }
