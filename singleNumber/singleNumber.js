@@ -14,6 +14,14 @@ arr = [2,4,3,6,8,2,3,4,8];
 singleNumber(arr);//should return 6 because it only appear once
 */
 function singleNumber(arr){
+<<<<<<< HEAD
+=======
+	var array=[]
+	var x=array.push(arr.pop())
+	if(array.push(arr.pop()).indexof===-1){
+		
+	}
+>>>>>>> edce51640f6610c5f38c6d1745d26a8da6042fdb
 
 }
 
@@ -32,6 +40,12 @@ twoSum(nums,9); //should return [0,1] because nums[0] + nums[1] = 2 + 7 = 9;
 */
 
 function twoSum(nums, target){
+<<<<<<< HEAD
+=======
+	var arr=nums
+	var num=nums.shif()
+	if(num+)
+>>>>>>> edce51640f6610c5f38c6d1745d26a8da6042fdb
 
 }
 
@@ -47,5 +61,20 @@ countAllNumbers(2); //should return 91 because there are 91 numbers that have un
 */
 
 function countAllNumbers(n){
+<<<<<<< HEAD
 
 };
+=======
+	var num=Math.pow(10,n)
+	var str=String(num)
+	if(str.length>2){
+		return num-(n-1)*9
+	}
+	return 10
+
+};
+
+
+
+
+>>>>>>> edce51640f6610c5f38c6d1745d26a8da6042fdb
