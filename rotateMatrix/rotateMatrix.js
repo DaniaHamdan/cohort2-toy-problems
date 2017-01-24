@@ -50,7 +50,7 @@ var rotateMatrix =function (matrix) {
 }
  //Extra credit solution :
 var rotateMatrix2 =function (matrix,direction) {
-	var arra[]
+	var arra=[]
 	if (direction===1){
 	return rotateMatrix(matrix)
     }else {
@@ -59,7 +59,7 @@ var rotateMatrix2 =function (matrix,direction) {
     			for (var j = 0; j < matrix.length; j++) {
     				arr.push(matrix[j][i])
     			}
-    			array.push.(arr)
+    			array.push(arr)
     		}
     	}
     	return array
