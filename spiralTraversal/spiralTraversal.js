@@ -8,8 +8,23 @@
       [7,8,9]
     ]);
     returns [1, 2, 3, 6, 9, 8, 7, 4, 5]
- */
+    */
 
-var spiralTraversal = function(matrix){
+    var spiralTraversal = function(matrix){
+    	var array=[];
+    	var str=JSON.stringify(matrix)
+    	for (var i = 0; i < str.length; i++) {
+    		if(str[i]!=="["){
+    			if(str[i]!=="]"){
+    				if(str[i]!==","){
+    					array.push(str[i])
 
-};
+    				}
+    			}
+    		}
+    	}
+    	for (var i = 0; i < array.length; i++) {
+    		array[i]=Number(array[i])
+    	}
+    	return array
+    }
