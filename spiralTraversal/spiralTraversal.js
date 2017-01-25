@@ -11,20 +11,19 @@
     */
 
     var spiralTraversal = function(matrix){
-    	var array=[];
-    	var str=JSON.stringify(matrix)
-    	for (var i = 0; i < str.length; i++) {
-    		if(str[i]!=="["){
-    			if(str[i]!=="]"){
-    				if(str[i]!==","){
-    					array.push(str[i])
-
-    				}
-    			}
-    		}
+    	var arr=[];
+    	for (var i = 0; i < matrix[0].length; i++) {
+    			arr.push(matrix[0][i])		
     	}
-    	for (var i = 0; i < array.length; i++) {
-    		array[i]=Number(array[i])
-    	}
-    	return array
-    }
+    	for (var i =1; i < matrix.length; i++) {
+    		arr.push(matrix[i][matrix[i].length-1])
+  		}
+  	 	for (var i =matrix.length-1; i >=0; i--) {
+  	 		arr.push([matrix.length-1][i])
+  	 	}
+  	 	for (var i = matrix.length-2; i>0; i--) {
+  	 		arr.push(matrix[0][i]
+  	 	}
+  	 	arr.push(matrix[Math.floor(matrix.length/2)][matrix[Math.floor(matrix.length/2]);
+  	 		return arr
+  	   }
