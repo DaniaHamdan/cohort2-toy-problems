@@ -22,6 +22,8 @@ var binarySearch = function (array, target) {
 		}
 	 mid=(first+end)/2;
 	}
-	console.log(mid);
-};
-
+	if(first>end){
+		return "target not found"
+	}
+	return mid;
+}
