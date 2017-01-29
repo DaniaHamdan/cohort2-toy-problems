@@ -14,16 +14,13 @@ var binarySearch = function (array, target) {
 	var first=0;
 	var end=array.length-1;
 	var mid=(first+end)/2;
-	while(array[mid]!==target){
+	while(array[mid]!==target && first<=end){
 		if(array[mid]<target){
 			first=mid+1
 		}else if(array[mid]>target){
 			end=mid-1
 		}
 	 mid=(first+end)/2;
-	}
-	if(first>end){
-		return "target not found"
 	}
 	return mid;
 }
