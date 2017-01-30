@@ -42,7 +42,7 @@ var pipe = function(func1,func2){
 	var fun=arguments
 	return function(result){
 		for (var i = 0; i < fun.length; i++) {
-			result=fun[i].call(this,result)
+			result=fun[i].call(null,result)
 		}
 		return result
 	}
@@ -58,7 +58,7 @@ var compose = function(){
 	var fun=arguments
 	return function(result){
 		for (var i = 0; i < fun.length; i++) {
-			result=fun[i].call(this,result)
+			result=fun[i].call(null,result)
 		}
 		return result
 	}
