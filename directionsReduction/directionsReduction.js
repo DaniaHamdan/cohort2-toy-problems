@@ -45,5 +45,5 @@ var dirReduc = function(directions){
 	}
 	
 	return directions;
-};
+}; 
 

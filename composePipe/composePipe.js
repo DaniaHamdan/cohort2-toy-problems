@@ -39,9 +39,14 @@ var add2 = function(number){ return number + 2; }
 var multiplyBy3 = function(number){ return number * 3; }
 
 var pipe = function(func1,func2){
-  
+	var fun=arguments
+	return function(result){
+		for (var i = 0; i < fun.length; i++) {
+			result=fun[i].call(this,result)
+		}
+		return result
+	}
 };
-
 var addAndMultiplyTwice = pipe(add2, multiplyBy3, multiplyBy3);
 
 //==============================================================================
@@ -50,6 +55,13 @@ var addAndMultiplyTwice = pipe(add2, multiplyBy3, multiplyBy3);
  var exclaim = function(statement) { return statement.toUpperCase() + '!';}
 
 var compose = function(){
+	var fun=arguments
+	return function(result){
+		for (var i = 0; i < fun.length; i++) {
+			result=fun[i].call(this,result)
+		}
+		return result
+	}
   
 };
 
