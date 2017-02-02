@@ -40,3 +40,27 @@
  	}
  	return false 
  }
+
+
+// Extra credit
+Array.prototype.isSubsetOf = function (arr) {
+	var array=[];
+ 	var count=0;
+ 	for (var i = 0; i < this.length; i++) {
+ 		if(!array.includes(this[i])){
+ 			array.push(this[i])
+ 		}
+ 	}
+	var str=JSON.stringify(array);
+	var str1=JSON.stringify(arr);
+	for (var i = 0; i < str.length; i++) {
+ 		if(str1.includes(str[i])){
+ 			count++
+ 		}
+ 	}
+ 	if(count===str.length){
+ 		return true;
+ 	}
+ 	return false 
+
+}
