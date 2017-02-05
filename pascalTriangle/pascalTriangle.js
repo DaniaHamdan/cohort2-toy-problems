@@ -30,12 +30,11 @@ var buildTriangle = function(numOfRows){
 	var result=[arr0,arr1]
 	for(var i=0;i<numOfRows-2;i++){
 		var arr=[];
-		for (var j = 0; j<(3+i); j++) {
+		for (var j = 0; j<(i+1); j++) {
 			arr[0]=1
 			arr[j+1]=(result[j+1][j]+result[j+1][j+1]);
-
 		}
-		arr[arr.length-1]=1
+		arr.push(1);
 		result.push(arr)
 	}
 	return result;
