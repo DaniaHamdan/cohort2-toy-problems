@@ -16,4 +16,12 @@ var primeTester = function(n) {
   * saucy, check out the Sieve of Atkin.)
   */
 
-  
+  var rangePrime=function(start,end){
+  	var arr=[]
+  	for(var i=0;i<=(end-start)+1;i++){
+  		if(primeTester(i)){
+  			arr.push(i)
+  		}
+  	}
+  	return arr
+  }
