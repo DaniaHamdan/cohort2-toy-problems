@@ -22,7 +22,7 @@ var makeBoard = function(n) {
     }
   }
   
-  board.togglePiece = function(i, j) {
+  board.togglefiPiece = function(i, j) {
     this[i][j] = !this[i][j];
   }
   board.hasBeenVisited = function(i, j) {
@@ -34,7 +34,7 @@ var makeBoard = function(n) {
 //You can create a board size 5 like this:
 //var myBoard = makeBoard(5);
 //The answer for a board size 5 is 8512 unique paths
-var myBoard=makeBoard(5);
+var myBoard=makeBoard(5); // this is like online qustion
 var robotPaths = function(myBoard) {
   var NumOfpaths = 0;
   var max=myBoard.length
@@ -51,7 +51,7 @@ var robotPaths = function(myBoard) {
       Paths(i - 1, j);
       myBoard.togglePiece(i, j);
     }
-  };
+  }
   Paths(0, 0);
   return NumOfpaths;
 }
