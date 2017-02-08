@@ -16,14 +16,27 @@
  * You should return `null` on invalid input.
  */
 
-var translateRomanNumeral = function(romanNumeral){
-	var DIGIT_VALUES = {
-	  I: 1,
-	  V: 5,
-	  X: 10,
-	  L: 50,
-	  C: 100,
-	  D: 500,
-	  M: 1000
-	};
-}
+ var translateRomanNumeral = function(romanNumeral){
+ 	romanNumeral=romanNumeral.toUpperCase()
+ 	var num=0
+ 	var DIGIT_VALUES = {
+ 		I: 1,
+ 		V: 5,
+ 		X: 10,
+ 		L: 50,
+ 		C: 100,
+ 		D: 500,
+ 		M: 1000
+ 	};
+ 	for (var i =0; i < romanNumeral.length; i++) {
+ 		for(var kye in DIGIT_VALUES){
+ 			if(kye===romanNumeral[i]){
+ 				num+= DIGIT_VALUES[kye]
+ 			}
+ 		}
+ 	}
+ 	if(romanNumeral[0]==="I"&&romanNumeral[1]!=="I"&&romanNumeral[2]!=="I"){
+ 		num=num-2;
+ 	}
+ 	return num;
+ }

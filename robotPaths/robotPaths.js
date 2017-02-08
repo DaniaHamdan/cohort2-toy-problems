@@ -34,7 +34,7 @@ var makeBoard = function(n) {
 //You can create a board size 5 like this:
 //var myBoard = makeBoard(5);
 //The answer for a board size 5 is 8512 unique paths
-var myBoard=makeBoard(5); // this is like online qustion
+var myBoard=makeBoard(5); // this is like online qustiont
 var robotPaths = function(myBoard) {
   var NumOfpaths = 0;
   var max=myBoard.length
