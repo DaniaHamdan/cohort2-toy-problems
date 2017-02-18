@@ -28,15 +28,19 @@
  		D: 500,
  		M: 1000
  	};
- 	for (var i =0; i < romanNumeral.length; i++) {
+ 	num+=DIGIT_VALUES[romanNumeral[0]]
+ 	for (var i =1; i < romanNumeral.length; i++) {
+ 		if(!DIGIT_VALUES[romanNumeral[i]]){
+ 			return null
+ 		}
  		for(var kye in DIGIT_VALUES){
+ 			if(romanNumeral[i]>romanNumeral[i-1]){
+ 				num-=romanNumeral[i]-romanNumeral[i-1]
+ 			}
  			if(kye===romanNumeral[i]){
  				num+= DIGIT_VALUES[kye]
  			}
  		}
- 	}
- 	if(romanNumeral[0]==="I"&&romanNumeral[1]!=="I"&&romanNumeral[2]!=="I"){
- 		num=num-2;
  	}
  	return num;
  }
