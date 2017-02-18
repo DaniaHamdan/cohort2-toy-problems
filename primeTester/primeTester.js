@@ -4,10 +4,14 @@
  * a prime number, false if it's not.
  */
 var primeTester = function(n) {
+<<<<<<< HEAD
 	if(n%2!==0 && n%3!==0 && n%5!==0){
 		return true
 	}
 	return false 
+=======
+
+>>>>>>> ec1197ded368e7aad2cc2c29d5059a3905f42645
 }
 
  /* Extra credit: Write a function that generates a list of all prime numbers
@@ -16,6 +20,7 @@ var primeTester = function(n) {
   * saucy, check out the Sieve of Atkin.)
   */
 
+<<<<<<< HEAD
   var rangePrime=function(start,end){
   	var arr=[]
   	for(var i=0;i<=(end-start)+1;i++){
@@ -25,3 +30,6 @@ var primeTester = function(n) {
   	}
   	return arr
   }
+=======
+  
+>>>>>>> ec1197ded368e7aad2cc2c29d5059a3905f42645
