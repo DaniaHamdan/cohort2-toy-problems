@@ -56,6 +56,7 @@ Tree.prototype.countLeaves = function () {
   * (wrap values in Tree nodes if they're not already)
   */
 Tree.prototype.addChild = function(child){
+	
 	this.children.push(child)
 };
 

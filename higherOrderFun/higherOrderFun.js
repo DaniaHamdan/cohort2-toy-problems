@@ -12,7 +12,10 @@ See example usage to understand what arguments are passed to the callback.
 */
 
 Array.prototype.map = function(callback){
-
+	var arr=[];
+	for (var i = 0; i < this.length; i++) {
+		arr.push(callback(this[i],i,this)
+	}
 }
 
 /*
@@ -39,7 +42,11 @@ Please see example usage to understand what should be passed to the callback.
 */
 
 var asyncSum = function(a,b,callback){
-
+	if(typeof a !== "number" || typeof b !== "number"){
+		setTimeout(callback("Incorrect argument(s)"), 1000);
+	}else {
+	setTimeout(callback(false,(a+b)), 1000);
+		}
 };
 
 /*
