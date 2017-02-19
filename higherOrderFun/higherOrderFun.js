@@ -43,9 +43,9 @@ Please see example usage to understand what should be passed to the callback.
 
 var asyncSum = function(a,b,callback){
 	if(typeof a !== "number" || typeof b !== "number"){
-		setTimeout(callback("Incorrect argument(s)"), 1000);
+		callback("Incorrect argument(s)");
 	}else {
-	setTimeout(callback(false,(a+b)), 1000);
+	callback(null,(a+b));
 		}
 };
 
@@ -54,11 +54,12 @@ Example use:
 */
 
 var logNumber = function(error, number){
-  if(error){
+  setTimeout(function(){if(error){
     console.log('Error: ', error);
   } else {
     console.log('The total is: ', number)
   }
+},1000)
 };
 
 /*
