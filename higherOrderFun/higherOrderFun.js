@@ -14,8 +14,9 @@ See example usage to understand what arguments are passed to the callback.
 Array.prototype.map = function(callback){
 	var arr=[];
 	for (var i = 0; i < this.length; i++) {
-		arr.push(callback(this[i],i,this)
+		arr.push(callback(this[i],i))
 	}
+	return arr
 }
 
 /*
@@ -42,11 +43,13 @@ Please see example usage to understand what should be passed to the callback.
 */
 
 var asyncSum = function(a,b,callback){
-	if(typeof a !== "number" || typeof b !== "number"){
-		callback("Incorrect argument(s)");
+	var number=a+b;
+	setTimeout(function() {if(typeof number === "number"){
+		callback(null,number);
 	}else {
-	callback(null,(a+b));
-		}
+		callback("Incorrect argument(s)");
+	}
+},1000)
 };
 
 /*
@@ -54,12 +57,11 @@ Example use:
 */
 
 var logNumber = function(error, number){
-  setTimeout(function(){if(error){
-    console.log('Error: ', error);
-  } else {
-    console.log('The total is: ', number)
-  }
-},1000)
+	if(error){
+		console.log('Error: ', error);
+	} else {
+		console.log('The total is: ', number)
+	}
 };
 
 /*
