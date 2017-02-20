@@ -13,8 +13,8 @@ abc(); // should return 'c' on this third call
 abc(); // should return 'a' again on this fourth call
 */
 
-var call=0
 function makeLooper(string){
+	var call=0
 	return function (){
 		if(call===string.length){
 			call=0
@@ -59,7 +59,16 @@ pyramid(1666); // should === 16
 */
 
 function pyramid(cans){
-	
-};
+	var i=1;
+	var sum=0;
+	while(sum!==cans){
+		sum=sum+(i*i)
+		if((cans-sum)<(i*i)){
+			return i 
+		}
+		i++
+	}
+		return i
+}
 
 
