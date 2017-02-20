@@ -62,8 +62,8 @@ function pyramid(cans){
 	var i=1;
 	var sum=0;
 	while(sum!==cans){
-		sum=sum+(i*i)
-		if((cans-sum)<(i*i)){
+		sum=sum+(Math.pow(i,2))
+		if((cans-sum)<(Math.pow(i+1,2))){
 			return i 
 		}
 		i++
