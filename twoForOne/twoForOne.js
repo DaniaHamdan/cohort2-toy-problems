@@ -13,9 +13,16 @@ abc(); // should return 'c' on this third call
 abc(); // should return 'a' again on this fourth call
 */
 
-
+var call=0
 function makeLooper(string){
-
+	return function (){
+		if(call===string.length){
+			call=0
+		}
+		var x= string[call]
+		call++
+		return x
+	}
 };
 
 
