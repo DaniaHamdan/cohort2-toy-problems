@@ -37,9 +37,39 @@
 */
 
 
-var largestProductOfFour = function(array) {
 
-};
+var largestProductOfFour = function(array) {
+	var  max = 0;
+	var product = 1;
+        for(var i = 0; i < 20; i++){
+        	for(var j = 0; j < 20; j++){
+        		product = array[i][j] * array[i][j + 1] * array[i][j + 2] * array[i][j + 3];
+        		if(product > max){
+        			max = product;
+        		}
+        	}   
+        }
+        for(var i = 0; i < 20; i ++){
+        	for(var j = 0; j < 20; j++){
+        		product = array[i][j] * array[i + 1][j] * array[i + 2][j] * array[i + 3][j];
+        		if(product > max){
+        			max = product;
+        		}
+        	}
+        }
+      
+        for(var i = 0; i < 20; i ++){
+        	for(var j = 1; j < 20; j ++){
+        		product = array[i][j] * array[i + 1][j - 1] * array[i + 2][j  - 2] * array[i + 3][j - 3];
+        		if(product > max){
+        			max = product;
+        		}
+        	}
+        }
+        return product;
+        
+    }
+
 
 
 
