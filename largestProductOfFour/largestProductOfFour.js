@@ -66,7 +66,7 @@ var largestProductOfFour = function(array) {
         		}
         	}
         }
-        return product;
+        return max;
         
     }
 
